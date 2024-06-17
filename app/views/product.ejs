@@ -5,7 +5,7 @@
                 <i class="fa fa-th"></i> สินค้า
             </div>
             <div class="card-body">
-                <a href="/productForm" class="btn btn-danger">
+                <a href="/productForm" class="btn btn-success">
                     <i class="fa fa-plus"></i> เพิ่มรายการ
                 </a>
                 <table class="table table-bordered mt-3">
@@ -27,10 +27,10 @@
                             <td class="text-right"><%= item.price %></td>
                             <td class="text-center">
                                 <a class="btn btn-primary" href="/productEdit/<%= item.id %>">
-                                    <i class="btn btn-pencil"></i>
+                                    <i class="fa fa-pencil"></i>
                                 </a>
                                 <a class="btn btn-danger">
-                                    <i class="btn btn-danger" onclick="return confirm('Delete ?')" href="/productDelete/<%= item.id %>"></i>
+                                    <i class="fa fa-close" onclick="return confirm('Delete ?')" href="/productDelete/<%= item.id %>"></i>
                                 </a>
                             </td>
                         </tr>

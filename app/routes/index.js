@@ -8,7 +8,6 @@ const mysql = mysql2.createPool({
   password: '',
   database: 'db_nodepos'
 });
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -28,5 +27,15 @@ router.get('/product', (req , res) => {
 router.get('/productForm', (req, res) => {
   res.render('productForm', {data: {}});
 });
-
+router.post('/productForm', (req, res)=>{
+  let sql = 'INSERT INTO tb_product SET ?';
+  var data = req.body;
+  mysql.query(sql,data, (err, rs)=> {
+    if(err){
+      res.send(err);
+    }else{
+      res.redirect('product');
+    }
+  });
+});
 module.exports = router;
