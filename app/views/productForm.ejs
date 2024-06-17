@@ -1,0 +1,17 @@
+<%- include("header") %>
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-th"></i> สินค้า
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Barcode</label>
+                    <input name="barcode" value="<%= data.barcode %>" class="form-control" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("footer") %>
