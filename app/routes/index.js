@@ -13,5 +13,16 @@ const mysql = mysql2.createPool({
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/product', (req , res) => {
+  let sql = "SELECT * FROM tb_product";
+  mysql.query(sql, (err , rs) => {
+    if(err) {
+      res.send(err);
+    } else {
+      console.log(rs);
+      res.render('product', {products: rs});
+    }
+  })
+});
 
 module.exports = router;
