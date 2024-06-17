@@ -25,4 +25,8 @@ router.get('/product', (req , res) => {
   })
 });
 
+router.get('/productForm', (req, res) => {
+  res.render('productForm', {data: {}});
+});
+
 module.exports = router;

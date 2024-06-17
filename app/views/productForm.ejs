@@ -10,6 +10,23 @@
                     <label>Barcode</label>
                     <input name="barcode" value="<%= data.barcode %>" class="form-control" />
                 </div>
+                <div class="form-group">
+                    <label>ชื่อสินค้า</label>
+                    <input name="name" value="<%= data.name %>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>ราคาทุน</label>
+                    <input name="cost" value="<%= data.cost %>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>ราคาจำหน่าย</label>
+                    <input name="price" value="<%= data.price %>" class="form-control" />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-check"></i> บันทึก
+                    </button>
+                </div>
             </form>
         </div>
     </div>
